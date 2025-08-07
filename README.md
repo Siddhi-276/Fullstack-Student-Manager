@@ -18,9 +18,6 @@ A full-stack **Student Records Management System** built using **Spring Boot**, 
 - HTML
 - CSS
 - Javascript
-# Run the application
-Using terminal or IDE:
-`mvn spring-boot:run`
 # Screenshots
 **Adding new student member**
 <img width="1916" height="1084" alt="Screenshot 2025-08-07 195845" src="https://github.com/user-attachments/assets/fe710a17-878d-4bbe-8bbf-88edf26fa3a9" />
