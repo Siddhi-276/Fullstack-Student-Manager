@@ -3,7 +3,6 @@ const studentTableBody = document.getElementById("studentTableBody");
 const studentForm = document.getElementById("studentForm");
 let currentEditId = null;
 
-// Fetch and display all students
 function fetchStudents() {
   fetch(apiBase)
     .then(res => res.json())
@@ -26,7 +25,6 @@ function fetchStudents() {
     });
 }
 
-// Add student
 studentForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const name = document.getElementById("name").value;
@@ -46,7 +44,6 @@ studentForm.addEventListener("submit", (e) => {
   });
 });
 
-// Delete student
 function deleteStudent(id) {
   fetch(`${apiBase}/${id}`, {
     method: "DELETE",
@@ -58,8 +55,6 @@ function deleteStudent(id) {
     }
   });
 }
-
-// Open edit modal
 function openEditModal(id, name, email) {
   currentEditId = id;
   document.getElementById("editName").value = name;
@@ -67,12 +62,10 @@ function openEditModal(id, name, email) {
   document.getElementById("editModal").style.display = "block";
 }
 
-// Close modal
 function closeEditModal() {
   document.getElementById("editModal").style.display = "none";
 }
 
-// Update student
 function updateStudent() {
   const updatedName = document.getElementById("editName").value;
   const updatedEmail = document.getElementById("editEmail").value;
@@ -96,3 +89,4 @@ function updateStudent() {
 
 // Initialize
 fetchStudents();
+
