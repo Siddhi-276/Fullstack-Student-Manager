@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduRecordHub - Student Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>EduRecordHub</h1>
+      <p>Manage your student records efficiently</p>
+    </header>
+
+
+    <div class="form-section">
+      <form id="studentForm">
+        <input type="text" id="name" placeholder="Full Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <button type="submit">Add Student</button>
+      </form>
+    </div>
+
+    <div class="table-section">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="studentTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeEditModal()">&times;</span>
+      <h2>Edit Student</h2>
+      <input type="text" id="editName" placeholder="Full Name" />
+      <input type="email" id="editEmail" placeholder="Email" />
+      <button id="updateStudentBtn" class="modal-update-btn" onclick="updateStudent()">Update</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
