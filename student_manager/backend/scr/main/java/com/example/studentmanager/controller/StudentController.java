@@ -6,10 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-
 import java.util.List;
-
-// You may need to create this class (see below)
 import com.example.studentmanager.exception.ResourceNotFoundException;
 
 @RestController
@@ -45,7 +42,6 @@ public class StudentController {
         repo.deleteById(id);
     }
 
-    // FIXED THIS METHOD
     @PutMapping("/students/{id}")
     public ResponseEntity<Student> updateStudentById(@PathVariable Long id, @RequestBody Student studentDetails) {
         Student student = repo.findById(id)
@@ -58,3 +54,4 @@ public class StudentController {
         return new ResponseEntity<>(updatedStudent, HttpStatus.OK);
     }
 }
+
