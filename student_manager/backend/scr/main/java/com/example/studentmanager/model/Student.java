@@ -1,5 +1,4 @@
 package com.example.studentmanager.model;
-
 import jakarta.persistence.*;
 
 @Entity
@@ -43,3 +42,4 @@ public class Student {
         this.email = email; 
     }
 }
+
